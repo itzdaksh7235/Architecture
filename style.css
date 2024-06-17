@@ -7,7 +7,6 @@
   --Roboto: "Roboto", sans-serif;
   --Montserrat: "Montserrat", sans-serif;
 }
-/* Default Styles */
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +19,6 @@
 html {
   font-size: 62.5%;
 }
-/* End of Default Styles */
 
 /* Container */
 .container {
@@ -32,7 +30,7 @@ html {
 /* Navbar */
 .navbar {
   width: 100%;
-  height: 10rem;
+  height: 6rem;
   background-color: #202020;
   position: fixed;
   top: 0;
@@ -48,14 +46,14 @@ html {
 }
 
 .logo1 {
-  width: 6rem;
-  height: 6rem;
+  width: 3rem;
+  height: 3rem;
   border: 0.4rem solid #dba81b;
 }
 
 .logo2 {
-  width: 5rem;
-  height: 5rem;
+  width: 2rem;
+  height: 2.2rem;
   background-color: #202020;
   position: absolute;
   top: 1rem;
@@ -64,21 +62,22 @@ html {
 }
 
 .logo3 {
-  width: 5rem;
-  height: 5rem;
+  width: 2.4rem;
+  height: 2.4rem;
   border: 0.4rem solid #dba81b;
   background-color: #202020;
   position: absolute;
-  top: 2rem;
-  left: 2rem;
+  top: 1.5rem;
+  left: 1.7rem;
   /* z-index: 20; */
 }
 
 .brand span {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  font-family: var(--Kanit);
   color: #fff;
   letter-spacing: 0.3rem;
-  margin: 1.5rem 0 0 3rem;
+  margin: .1rem 0 0 2rem;
 }
 
 .search-bar {
@@ -89,32 +88,42 @@ html {
 }
 
 .search-bar input {
-  width: 45rem;
-  height: 4rem;
+  width: 30rem;
+  height: 2rem;
   background-color: #3e3e41;
   border: none;
   padding: 2rem 2rem 2rem 4rem;
   font-size: 1.6rem;
-  color: #fff;
+  color: #ddd;
   border-radius: 0.5rem;
 }
 
 .search-bar input::placeholder {
-  color: #ccc;
+  transition: .4s ease;
+  color: #ccccccd0;
 }
 
+.search-bar input:focus::placeholder{
+  color: #ddd;
+}
 .search-bar i {
   position: absolute;
+  transition: .4s ease;
   top: 50%;
   left: 1.5rem;
   transform: translateY(-50%);
   font-size: 1.6rem;
-  color: #ccc;
+  color: #ccccccd0;
+}
+
+.search-bar i:hover{
+  color: #ddd;
+  cursor: pointer;
 }
 
 .menu-icon {
-  width: 4rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 1.5rem;
   position: absolute;
   top: 50%;
   right: 8rem;
@@ -127,20 +136,24 @@ html {
 }
 
 .line {
-  width: 4rem;
+  width: 2.6rem;
   height: 0.2rem;
   background-color: #ccc;
   transition: all 0.3s;
 }
 
 .change .line-1 {
-  width: 55%;
-  transform: rotateZ(-15deg) translate(-0.2rem, 0.8rem);
+  width: 85%;
+  transform: rotateZ(-60deg) translate(-0.2rem, 0.8rem);
+}
+
+.change .line-2{
+  display: none;
 }
 
 .change .line-3 {
-  width: 55%;
-  transform: rotateZ(15deg) translate(-0.2rem, -0.8rem);
+  width: 85%;
+  transform: rotateZ(60deg) translate(-0.2rem, -0.8rem);
 }
 
 .navigation {
@@ -153,7 +166,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s;
+  transition: all 0.4s;
   /* z-index: 50; */
 }
 
@@ -162,8 +175,8 @@ html {
 }
 
 .navigation a {
-  font-family: "Alfa Slab One", cursive;
-  font-size: 5rem;
+  font-family: var(--Kanit);
+  font-size:4.3rem;
   color: #fff;
   letter-spacing: 0.3rem;
   margin-bottom: 1rem;
@@ -177,23 +190,23 @@ html {
 }
 
 .change .navigation a:nth-child(2) {
-  transition: all 0.3s 0.4s;
-}
-
-.change .navigation a:nth-child(3) {
   transition: all 0.3s 0.5s;
 }
 
-.change .navigation a:nth-child(4) {
-  transition: all 0.3s 0.6s;
-}
-
-.change .navigation a:nth-child(5) {
+.change .navigation a:nth-child(3) {
   transition: all 0.3s 0.7s;
 }
 
+.change .navigation a:nth-child(4) {
+  transition: all 0.3s 0.9s;
+}
+
+.change .navigation a:nth-child(5) {
+  transition: all 0.3s 1.1s;
+}
+
 .change .navigation a:nth-child(6) {
-  transition: all 0.3s 0.8s;
+  transition: all 0.3s 1.3s;
 }
 
 .change .navigation a {
@@ -203,12 +216,13 @@ html {
 
 .navigation a::before {
   content: "";
-  width: 15rem;
-  height: 0.5rem;
+  width: 10rem;
+  height: 0.3rem;
+  border-radius: .3rem;
   background-color: #dba81b;
   position: absolute;
   top: 50%;
-  left: -17rem;
+  left: -13rem;
   transform: translateY(-50%);
   transform: scale(0);
   transform-origin: right;
@@ -221,12 +235,13 @@ html {
 
 .navigation a::after {
   content: "";
-  width: 15rem;
-  height: 0.5rem;
+  width: 10rem;
+  height: 0.3rem;
+  border-radius: .3rem;
   position: absolute;
   background-color: #dba81b;
   top: 50%;
-  right: -17rem;
+  right: -13rem;
   transform: translateY(-50%);
   transform: scale(0);
   transform-origin: left;
@@ -241,17 +256,17 @@ html {
 /* Landing */
 .landing {
   width: 100%;
-  height: 90vh;
+  height: 96vh;
   position: relative;
 }
 
 .landing-img {
   position: absolute;
-  top: 11rem;
+  top: 4rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 92%;
-  height: 70vh;
+  width: 96%;
+  height: 86vh;
 }
 
 .landing-img img {
@@ -263,18 +278,18 @@ html {
 
 .banner {
   position: absolute;
-  bottom: 15rem;
-  left: 20rem;
+  bottom: 6rem;
+  left: 4rem;
 }
 
 .banner-heading {
-  font-size: 9rem;
+  font-size: 5rem;
   color: #fff;
 }
 
 .banner-heading span {
-  font-family: "Alfa Slab One", cursive;
-  font-size: 8rem;
+  font-family: var(--Poppins);
+  font-size: 6rem;
   color: #dba81b;
   letter-spacing: 0.5rem;
 }
@@ -285,21 +300,28 @@ html {
 }
 
 .banner-content p {
-  width: 45rem;
+  width: 35rem;
+  letter-spacing: 0.1rem;
   font-size: 2rem;
   color: #fff;
   margin-right: 2rem;
 }
 
 .banner-content button {
-  width: 15rem;
+  width: 14rem;
   height: 5rem;
   background-color: transparent;
   border: 0.3rem solid #fff;
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: bold;
+  border-radius: .1rem;
+  transition: .4s ease;
   cursor: pointer;
+}
+.banner-content button:hover{
+  border-color:#dba81b;
+  background-color: #dba81b;
 }
 /* End of Landing */
 
