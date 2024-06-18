@@ -7,6 +7,7 @@
   --Roboto: "Roboto", sans-serif;
   --Montserrat: "Montserrat", sans-serif;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +20,7 @@
 html {
   font-size: 62.5%;
 }
+/* End of Default Styles */
 
 /* Container */
 .container {
@@ -30,7 +32,7 @@ html {
 /* Navbar */
 .navbar {
   width: 100%;
-  height: 6rem;
+  height: 10rem;
   background-color: #202020;
   position: fixed;
   top: 0;
@@ -46,14 +48,14 @@ html {
 }
 
 .logo1 {
-  width: 3rem;
-  height: 3rem;
+  width: 5rem;
+  height: 5rem;
   border: 0.4rem solid #dba81b;
 }
 
 .logo2 {
-  width: 2rem;
-  height: 2.2rem;
+  width: 5rem;
+  height: 5rem;
   background-color: #202020;
   position: absolute;
   top: 1rem;
@@ -62,22 +64,22 @@ html {
 }
 
 .logo3 {
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 4rem;
+  height: 4rem;
   border: 0.4rem solid #dba81b;
   background-color: #202020;
   position: absolute;
-  top: 1.5rem;
-  left: 1.7rem;
+  top: 2rem;
+  left: 2rem;
   /* z-index: 20; */
 }
 
 .brand span {
-  font-size: 2.5rem;
-  font-family: var(--Kanit);
+  font-size: 4rem;
   color: #fff;
+  font-family: var(--Kanit);
   letter-spacing: 0.3rem;
-  margin: .1rem 0 0 2rem;
+  margin: 0rem 0 0 3rem;
 }
 
 .search-bar {
@@ -88,42 +90,40 @@ html {
 }
 
 .search-bar input {
-  width: 30rem;
-  height: 2rem;
+  width: 45rem;
+  height: 5rem;
+  font-family: var(--Poppins);
   background-color: #3e3e41;
   border: none;
   padding: 2rem 2rem 2rem 4rem;
-  font-size: 1.6rem;
-  color: #ddd;
+  font-size: 1.8rem;
+  transition: 0.5s ease;
+  color: #fff;
   border-radius: 0.5rem;
 }
 
 .search-bar input::placeholder {
-  transition: .4s ease;
-  color: #ccccccd0;
+  color: #ccccccd2;
 }
-
-.search-bar input:focus::placeholder{
-  color: #ddd;
+.search-bar input:focus::placeholder {
+  color: #eee;
+}
+.search-bar i:hover {
+  color: #eee;
 }
 .search-bar i {
   position: absolute;
-  transition: .4s ease;
   top: 50%;
   left: 1.5rem;
+  cursor: pointer;
   transform: translateY(-50%);
   font-size: 1.6rem;
-  color: #ccccccd0;
-}
-
-.search-bar i:hover{
-  color: #ddd;
-  cursor: pointer;
+  color: #ccccccd2;
 }
 
 .menu-icon {
-  width: 2rem;
-  height: 1.5rem;
+  width: 4rem;
+  height: 2.5rem;
   position: absolute;
   top: 50%;
   right: 8rem;
@@ -136,24 +136,20 @@ html {
 }
 
 .line {
-  width: 2.6rem;
+  width: 4rem;
   height: 0.2rem;
   background-color: #ccc;
   transition: all 0.3s;
 }
 
 .change .line-1 {
-  width: 85%;
-  transform: rotateZ(-60deg) translate(-0.2rem, 0.8rem);
-}
-
-.change .line-2{
-  display: none;
+  width: 55%;
+  transform: rotateZ(-15deg) translate(-0.2rem, 0.8rem);
 }
 
 .change .line-3 {
-  width: 85%;
-  transform: rotateZ(60deg) translate(-0.2rem, -0.8rem);
+  width: 55%;
+  transform: rotateZ(15deg) translate(-0.2rem, -0.8rem);
 }
 
 .navigation {
@@ -166,7 +162,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: all 0.4s;
+  transition: all 0.3s;
   /* z-index: 50; */
 }
 
@@ -175,11 +171,11 @@ html {
 }
 
 .navigation a {
-  font-family: var(--Kanit);
-  font-size:4.3rem;
+  font-family: var(--Noto);
+  font-size: 6rem;
   color: #fff;
   letter-spacing: 0.3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   position: relative;
   opacity: 0;
   visibility: hidden;
@@ -216,13 +212,12 @@ html {
 
 .navigation a::before {
   content: "";
-  width: 10rem;
-  height: 0.3rem;
-  border-radius: .3rem;
+  width: 15rem;
+  height: 0.5rem;
   background-color: #dba81b;
   position: absolute;
   top: 50%;
-  left: -13rem;
+  left: -17rem;
   transform: translateY(-50%);
   transform: scale(0);
   transform-origin: right;
@@ -235,13 +230,12 @@ html {
 
 .navigation a::after {
   content: "";
-  width: 10rem;
-  height: 0.3rem;
-  border-radius: .3rem;
+  width: 15rem;
+  height: 0.5rem;
   position: absolute;
   background-color: #dba81b;
   top: 50%;
-  right: -13rem;
+  right: -17rem;
   transform: translateY(-50%);
   transform: scale(0);
   transform-origin: left;
@@ -256,17 +250,17 @@ html {
 /* Landing */
 .landing {
   width: 100%;
-  height: 96vh;
+  height: 98vh;
   position: relative;
 }
 
 .landing-img {
   position: absolute;
-  top: 4rem;
+  top: 8rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 96%;
-  height: 86vh;
+  width: 97%;
+  height: 85vh;
 }
 
 .landing-img img {
@@ -278,18 +272,18 @@ html {
 
 .banner {
   position: absolute;
-  bottom: 6rem;
-  left: 4rem;
+  bottom: 8rem;
+  left: 1rem;
 }
 
 .banner-heading {
-  font-size: 5rem;
+  font-size: 7rem;
   color: #fff;
 }
 
 .banner-heading span {
-  font-family: var(--Poppins);
-  font-size: 6rem;
+  font-family: var(--Kanit);
+  font-size: 9rem;
   color: #dba81b;
   letter-spacing: 0.5rem;
 }
@@ -300,35 +294,36 @@ html {
 }
 
 .banner-content p {
-  width: 35rem;
-  letter-spacing: 0.1rem;
+  width: 45rem;
   font-size: 2rem;
   color: #fff;
   margin-right: 2rem;
 }
 
 .banner-content button {
-  width: 14rem;
+  width: 15rem;
   height: 5rem;
+  font-family: var(--Poppins);
   background-color: transparent;
   border: 0.3rem solid #fff;
   color: #fff;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
+  transition: 0.3s ease;
+  letter-spacing: 0.15rem;
   font-weight: bold;
-  border-radius: .1rem;
-  transition: .4s ease;
   cursor: pointer;
 }
-.banner-content button:hover{
-  border-color:#dba81b;
-  background-color: #dba81b;
+
+.banner-content button:hover {
+  background-color: white;
+  color: #202020;
 }
 /* End of Landing */
 
 /* About */
 .about {
   width: 100%;
-  height: 75vh;
+  height: 85vh;
   background-color: #313133;
   display: flex;
   align-items: center;
@@ -336,16 +331,16 @@ html {
   position: relative;
 }
 
- 
 .about-left h1 {
   font-size: 5rem;
   color: #fff;
+  font-family: var(--Montserrat);
   width: 50rem;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 
 .about-left p {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #fff;
   width: 50rem;
   margin-bottom: 5rem;
@@ -355,13 +350,20 @@ html {
   width: 18rem;
   height: 5rem;
   background-color: transparent;
-  border: 0.2rem solid #dba81b;
+  border: 0.3rem solid #dba81b;
+  font-family: var(--Roboto);
   color: #dba81b;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+  font-style: italic;
+  transition: 0.4s ease;
   letter-spacing: 0.1rem;
   cursor: pointer;
 }
-
+.about-left button:hover {
+  background-color: #dba81b;
+  color: #eee;
+}
 .frame {
   width: 50rem;
   height: 35rem;
@@ -387,8 +389,8 @@ html {
 
 .section-bottom {
   position: absolute;
-  bottom: 2rem;
-  right: 33rem;
+  bottom: 1rem;
+  right: 3rem;
   height: 12rem;
   border-right: 1rem solid #dba81b;
   text-align: right;
@@ -396,14 +398,14 @@ html {
 }
 
 .section-bottom h1 {
-  font-family: "Alfa Slab One", cursive;
-  font-size: 6rem;
+  font-family: var(--Kanit);
+  font-size: 5rem;
   color: #555;
   letter-spacing: 0.5rem;
 }
 
 .section-bottom h3 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #fff;
 }
 /* End of About */
@@ -417,6 +419,7 @@ html {
 
 .projects-heading {
   font-size: 8rem;
+  font-family: var(--Noto);
   color: #fff;
   margin: 7rem 0 10rem 9rem;
   letter-spacing: 0.2rem;
@@ -429,8 +432,8 @@ html {
 }
 
 .card {
-  width: 32rem;
-  height: 50rem;
+  width: 33rem;
+  height: 45rem;
   margin-right: 2.5rem;
   cursor: pointer;
   position: relative;
@@ -490,12 +493,13 @@ html {
 }
 
 .card-content h1 {
-  font-size: 2rem;
+  font-size: 2.3rem;
+  font-family: var(--Roboto);
   color: #fff;
   position: absolute;
   top: 4rem;
   left: 4rem;
-  width: 15rem;
+  width: 20rem;
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s;
@@ -508,7 +512,7 @@ html {
 }
 
 .card-content p {
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   color: #fff;
   position: absolute;
   top: 13rem;
@@ -533,16 +537,18 @@ html {
 /* Customers */
 .customers {
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   background-color: #313133;
   padding-top: 7rem;
   position: relative;
 }
 
 .customers-heading {
-  font-size: 8rem;
+  font-size: 6rem;
   color: #fff;
-  margin: 0 0 10rem 9rem;
+  font-family: var(--Montserrat);
+  width: 50rem;
+  margin: 0 0 8rem 9rem;
   letter-spacing: 0.2rem;
 }
 
@@ -582,8 +588,9 @@ html {
 }
 
 .customers-card-content h3 {
-  font-size: 1.8rem;
-  color: #ccc;
+  font-family: var(--Playwrite);
+  font-size: 1.5rem;
+  color: #eee;
   margin-bottom: 3rem;
 }
 
@@ -615,6 +622,7 @@ html {
 
 .contact-content h1 {
   font-size: 3rem;
+  font-family: var(--Noto);
   text-transform: uppercase;
   color: #ccc;
 }
@@ -628,7 +636,7 @@ html {
   border-bottom: 0.1rem solid #777;
   font-size: 1.8rem;
   color: #ccc;
-  transition: all 0.3s;
+  transition: all 0.4s;
 }
 
 .contact-content input:focus {
@@ -636,16 +644,23 @@ html {
 }
 
 .contact-content input::placeholder {
+  transition: all 4s;
   color: #ccc;
+  font-family: var(--Poppins);
   letter-spacing: 0.1rem;
 }
-
+.contact-content input:focus::placeholder {
+  color: #dba81b;
+}
 .contact-right {
   position: relative;
 }
-
+.contact-right i:hover {
+  color: #dba81b;
+}
 .contact-right i {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  transition: all 0.4s;
   position: absolute;
   top: 20%;
   right: 0;
@@ -672,7 +687,7 @@ html {
 .brand-footer .logo1 {
   width: 3rem;
   height: 3rem;
-  border: 0.2rem solid #dba81b;
+  border: 0.3rem solid #dba81b;
 }
 
 .brand-footer .logo2 {
@@ -686,7 +701,7 @@ html {
 .brand-footer .logo3 {
   width: 2.5rem;
   height: 2.5rem;
-  border: 0.2rem solid #dba81b;
+  border: 0.3rem solid #dba81b;
   background-color: #202020;
   top: 1.3rem;
   left: 1.3rem;
@@ -708,7 +723,8 @@ html {
 /* End of Footer */
 /* End of Container */
 
-/* @media (max-width: 1700px) {
+/* Responsive */
+@media (max-width: 1700px) {
   .banner {
     left: 12rem;
   }
@@ -952,4 +968,5 @@ html {
   .projects-heading {
     font-size: 6rem;
   }
-} */
+}
+/* End of Responsive */
