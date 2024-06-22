@@ -436,14 +436,14 @@ html {
 }
 
 .cards {
-  width: 90%;
+  width: 10%;
   margin: auto;
   display: flex;
 }
 
 .card {
   width: 33rem;
-  height: 45rem;
+  height: 48rem;
   margin-right: 2.5rem;
   cursor: pointer;
   position: relative;
@@ -958,11 +958,15 @@ html {
   .navbar-brand span {
     display: none;
   }
+  .search-bar input {
+    width: 26rem;
+  }
   .search-bar input::placeholder {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .navigation a {
-    font-size: 3rem;
+    font-size: 6rem;
+    margin-bottom: 6rem;
   }
 
   .navigation a::before,
@@ -979,16 +983,28 @@ html {
   }
 
   .banner {
-    left: 5rem;
-    bottom: 18rem;
+    left: 3rem;
+    bottom: 28rem;
   }
 
   .banner-heading {
-    font-size: 5rem;
+    font-size: 7rem;
+  }
+
+  .banner-content p {
+    font-size: 2.4rem;
+  }
+  .banner-content button {
+    width: 20.7rem;
+    height: 7.2rem;
+    font-size: 2.5rem;
   }
 
   .banner-heading span {
-    font-size: 4rem;
+    font-size: 9.4rem;
+  }
+  .landing-img {
+    height: 85vh;
   }
 
   .about {
@@ -1008,5 +1024,57 @@ html {
 
   .projects-heading {
     font-size: 6rem;
+  }
+  .card {
+    width: 100%;
+    height: 80rem;
+    margin-bottom: 4.6rem;
+  }
+  .contact-left h1 {
+    padding: 0rem 4rem;
+    font-size: 2.4rem;
+  }
+
+  .brand-footer .logo1 {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0.3rem solid #dba81b;
+  }
+
+  .brand-footer .logo2 {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #202020;
+    top: 0.7rem;
+    left: 0.7rem;
+  }
+
+  .brand-footer .logo3 {
+    width: 2rem;
+    height: 2rem;
+    border: 0.3rem solid #dba81b;
+    background-color: #202020;
+    top: 1.3rem;
+    left: 1.3rem;
+  }
+
+  .brand-footer span {
+    font-size: 1.7rem;
+    margin-left: 2rem;
+  }
+
+  .logo1 {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .logo2 {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .logo3 {
+    width: 3rem;
+    height: 3rem;
   }
 }
