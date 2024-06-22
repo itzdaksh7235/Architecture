@@ -6,8 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Architecture</title>
+
+  <!--TODO CSS -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+  <!--TODO FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Abel&family=Alfa+Slab+One&display=swap" rel="stylesheet" />
@@ -20,24 +24,25 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+CO:wght@100..400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ:wght@100..400&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- Container -->
+  <!--! Container -->
   <div class="container">
-    <!-- Navbar -->
+    <!--* Navbar -->
     <nav class="navbar">
       <div class="brand navbar-brand">
         <div class="logo1"></div>
         <div class="logo2"></div>
         <div class="logo3"></div>
-        <span>ARCHITECTURE</span>
+        <span><a href="#home" title="Architecture">ARCHITECTURE</a></span>
       </div>
       <div class="search-bar">
-        <input type="text" placeholder="What are you looking for?">
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="&nbsp;&nbsp;What&nbsp; are&nbsp; you&nbsp; looking&nbsp; for?">
+        <i title="Search" class="fa-solid fa-magnifying-glass"></i>
       </div>
       <div class="hamburger-menu">
         <div class="menu-icon">
@@ -46,19 +51,18 @@
           <div class="line line-3"></div>
         </div>
         <div class="navigation">
-          <a href="#">HOME</a>
-          <a href="#">ABOUT</a>
-          <a href="#">PROJECTS</a>
-          <a href="#">BLOG</a>
-          <a href="#">CUSTOMERS</a>
-          <a href="#">CONTACT</a>
+          <a href="#home">HOME</a>
+          <a href="#about">ABOUT</a>
+          <a href="#projects">PROJECTS</a>
+          <a href="#customers">CUSTOMERS</a>
+          <a href="#contact">CONTACT</a>
         </div>
       </div>
     </nav>
-    <!-- End of Navbar -->
+    <!--* End of Navbar -->
 
-    <!-- Landing -->
-    <section class="landing">
+    <!--? Landing -->
+    <section id="home" class="landing">
       <div class="landing-img">
         <img src="images/landing-bg.jpg">
       </div>
@@ -66,19 +70,20 @@
         <h1 class="banner-heading"><span>DREAM</span> HOUSE</h1>
         <div class="banner-content">
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, eveniet culpa numquam </p>
-          <button>READ MORE</button>
+          <button title="Read More"> READ MORE</button>
         </div>
       </div>
     </section>
-    <!-- End of Landing -->
+    <!--? End of Landing -->
 
-    <!-- About -->
+    <!--? About -->
+    <span id="about"></span>
     <section class="about">
       <div class="about-left">
         <h1>WE ARE CREATIVE BUILDING - DESIGN COMPANY</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione placeat et similique facere
           expedita voluptates, fuga accusamus quasi hic recusandae.</p>
-        <button>READ MORE</button>
+        <button title="Read More"> READ MORE</button>
       </div>
       <div class="about-right">
         <div class="frame"></div>
@@ -91,10 +96,11 @@
         <h3>EXPERIENCE WORKING</h3>
       </div>
     </section>
-    <!-- End of About -->
+    <!--? End of About -->
 
 
-    <!-- Projects -->
+    <!--? Projects -->
+    <span id="projects"></span>
     <section class="projects">
       <h1 class="projects-heading">LATEST PROJECTS</h1>
       <div class="cards">
@@ -146,10 +152,11 @@
         <h3>DESIGNS</h3>
       </div>
     </section>
-    <!-- End of Projects -->
+    <!--? End of Projects -->
 
-    <!-- Customers -->
-    <section class="customers">
+    <!--? Customers -->
+    <span id="customers"></span>
+    <section id="customers" class="customers">
       <h1 class="customers-heading">CUSTOMERS</h1>
       <div class="customers-content">
         <div class="customers-card">
@@ -178,10 +185,11 @@
         <h3>SAYS</h3>
       </div>
     </section>
-    <!-- End of Customers -->
+    <!--? End of Customers -->
 
-    <!-- Contact -->
-    <section class="contact">
+    <!--? Contact -->
+    <span id="contact"></span>
+    <section id="contact" class="contact">
       <div class="contact-content">
         <div class="contact-left">
           <h1>Stay tuned and get the latest updates</h1>
@@ -192,9 +200,9 @@
         </div>
       </div>
     </section>
-    <!-- End of Contact -->
+    <!--? End of Contact -->
 
-    <!-- Footer -->
+    <!--* Footer -->
     <footer class="footer">
       <div class="footer-content">
         <div class="brand brand-footer">
@@ -208,10 +216,12 @@
         </div>
       </div>
     </footer>
-    <!-- End of Footer -->
-    <!-- End of Container -->
+    <!--* End of Footer -->
+    <button id="go-up-btn" title="Go Up"><i class="fa-solid fa-chevron-up"></i></button>
 
-    <script src="script.js"></script>
+    <!--! End of Container -->
+  </div>
+  <script src="script.js"></script>
 </body>
 
 </html>
