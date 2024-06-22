@@ -1,7 +1,9 @@
 :root {
   --Noto: "Noto Sans", sans-serif;
   --Poppins: "Poppins", sans-serif;
-  --Playwrite: "Playwrite IN", cursive;
+  --PlaywriteIN: "Playwrite IN", cursive;
+  --Playwrite: "Playwrite CO", cursive;
+
   --Alfa: "Alfa Slab One", cursive;
   --Kanit: "Kanit", sans-serif;
   --Roboto: "Roboto", sans-serif;
@@ -11,6 +13,7 @@
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
   box-sizing: border-box;
   font-family: "Abel", sans-serif;
   text-decoration: none;
@@ -18,6 +21,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   font-size: 62.5%;
 }
 /* End of Default Styles */
@@ -73,7 +77,13 @@ html {
   left: 2rem;
   /* z-index: 20; */
 }
-
+.brand span a {
+  font-size: 4rem;
+  color: #fff;
+  font-family: var(--Kanit);
+  letter-spacing: 0.3rem;
+  margin: 0rem 0 0 3rem;
+}
 .brand span {
   font-size: 4rem;
   color: #fff;
@@ -92,11 +102,11 @@ html {
 .search-bar input {
   width: 45rem;
   height: 5rem;
-  font-family: var(--Poppins);
+  font-family: var(--Playwrite);
   background-color: #3e3e41;
   border: none;
   padding: 2rem 2rem 2rem 4rem;
-  font-size: 1.8rem;
+  font-size: 2rem;
   transition: 0.5s ease;
   color: #fff;
   border-radius: 0.5rem;
@@ -172,7 +182,7 @@ html {
 
 .navigation a {
   font-family: var(--Noto);
-  font-size: 6rem;
+  font-size: 8rem;
   color: #fff;
   letter-spacing: 0.3rem;
   margin-bottom: 2rem;
@@ -426,14 +436,14 @@ html {
 }
 
 .cards {
-  width: 90%;
+  width: 10%;
   margin: auto;
   display: flex;
 }
 
 .card {
   width: 33rem;
-  height: 45rem;
+  height: 48rem;
   margin-right: 2.5rem;
   cursor: pointer;
   position: relative;
@@ -721,6 +731,31 @@ html {
   color: #ccc;
 }
 /* End of Footer */
+
+/* GoUp button */
+
+#go-up-btn {
+  display: none;
+  position: fixed;
+  bottom: 2rem;
+  right: 2.5rem;
+  z-index: 199;
+  font-size: 2.4rem;
+  border: none;
+  outline: none;
+  background-color: #dba81b;
+  color: #cddccc;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  transition: 0.5s ease;
+}
+
+#go-up-btn:hover {
+  background-color: #555;
+}
+
+/* End of GoUp Button */
 /* End of Container */
 
 /* Responsive */
@@ -844,8 +879,12 @@ html {
 
   .search-bar input {
     width: 30rem;
+    font-size: 1.5rem;
   }
-
+  .banner {
+    bottom: 6rem;
+    left: 3rem;
+  }
   .banner-heading {
     font-size: 7rem;
   }
@@ -919,9 +958,15 @@ html {
   .navbar-brand span {
     display: none;
   }
-
+  .search-bar input {
+    width: 26rem;
+  }
+  .search-bar input::placeholder {
+    font-size: 1rem;
+  }
   .navigation a {
-    font-size: 3rem;
+    font-size: 6rem;
+    margin-bottom: 6rem;
   }
 
   .navigation a::before,
@@ -938,16 +983,28 @@ html {
   }
 
   .banner {
-    left: 5rem;
-    bottom: 18rem;
+    left: 3rem;
+    bottom: 28rem;
   }
 
   .banner-heading {
-    font-size: 5rem;
+    font-size: 7rem;
+  }
+
+  .banner-content p {
+    font-size: 2.4rem;
+  }
+  .banner-content button {
+    width: 20.7rem;
+    height: 7.2rem;
+    font-size: 2.5rem;
   }
 
   .banner-heading span {
-    font-size: 4rem;
+    font-size: 9.4rem;
+  }
+  .landing-img {
+    height: 85vh;
   }
 
   .about {
@@ -968,5 +1025,56 @@ html {
   .projects-heading {
     font-size: 6rem;
   }
+  .card {
+    width: 100%;
+    height: 80rem;
+    margin-bottom: 4.6rem;
+  }
+  .contact-left h1 {
+    padding: 0rem 4rem;
+    font-size: 2.4rem;
+  }
+
+  .brand-footer .logo1 {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0.3rem solid #dba81b;
+  }
+
+  .brand-footer .logo2 {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #202020;
+    top: 0.7rem;
+    left: 0.7rem;
+  }
+
+  .brand-footer .logo3 {
+    width: 2rem;
+    height: 2rem;
+    border: 0.3rem solid #dba81b;
+    background-color: #202020;
+    top: 1.3rem;
+    left: 1.3rem;
+  }
+
+  .brand-footer span {
+    font-size: 1.7rem;
+    margin-left: 2rem;
+  }
+
+  .logo1 {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .logo2 {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .logo3 {
+    width: 3rem;
+    height: 3rem;
+  }
 }
-/* End of Responsive */
